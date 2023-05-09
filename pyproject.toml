@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "metro_t0"
+name = "fairseq_t5"
 version = "0.0.1"
 dependencies = [
     "torch>=1.12",

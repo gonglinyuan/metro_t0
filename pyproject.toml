@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metro_t0"
+version = "0.0.1"
+dependencies = [
+    "torch>=1.12",
+    "transformers>=4.16"
+]

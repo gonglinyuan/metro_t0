@@ -4,6 +4,11 @@ Welcome to the repository for METRO-T0, where you'll find model checkpoints, our
 
 Paper: Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers (TODO) (ACL 2023)
 
+Authors: [Linyuan Gong](https://github.com/gonglinyuan), Chenyan Xiong, Xiaodong Liu, Payal Bajaj, Yiqing Xie, Alvin Cheung, Jianfeng Gao, Xia Song
+
+METRO-T0 is a T5-style text-to-text Transformer pretrained using model-generated pretraining signals, prompt-finetuned on a family of public NLP tasks proposed in [T0](https://arxiv.org/abs/2110.08207).
+METRO-T0 is highly parameter efficient. For example, METRO-T0-Large++ (775M parameters) outperforms GPT-3 (175B parameters) and T0-3B (3B parameters) on a wide range of NLP tasks.
+
 ![The architecture of METRO-T0 during pretraining using BERT as the auxiliary model to generate signals](assets/metro_t0_method.png)
 
 ![Prompt learning results of METRO-T0 versus our T0 baseline and T03B by Sanh et al. (2022) on 4 tasks  in the T0 Eval benchmark. Each point denotes the accuracy using one prompt template, except that the median accuracy over all templates of T03B is indicated by the blue point. The plots of other tasks are in our paper.](assets/metro_t0_selected_results.png)

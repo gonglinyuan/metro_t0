@@ -2,7 +2,7 @@
 
 Welcome to the repository for METRO-T0, where you'll find model checkpoints, our pretraining pipeline, and the prompt-finetuning pipeline.
 
-Paper: Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers (TODO)
+Paper: Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers (TODO) (ACL 2023)
 
 ![The architecture of METRO-T0 during pretraining using BERT as the auxiliary model to generate signals](assets/metro_t0_method.png)
 

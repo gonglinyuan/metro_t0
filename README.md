@@ -45,6 +45,7 @@ Here is the list of available models:
 ## Reproduce Our Experiment Results
 
 We use [t-zero](https://github.com/bigscience-workshop/t-zero) for evaluating our models on the _T0 Eval_ benchmark.
+The `t-zero` codebase has been shipped with this repository. Some changes are made so that METRO-T0 models are supported.
 Given the highly specific version requirements of the `t-zero` codebase dependencies, it's advisable to create a fresh conda environment (or virtualenv) for evaluation purposes. You can do this by following the steps below:
 
 ```bash

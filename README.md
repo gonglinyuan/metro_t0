@@ -2,7 +2,7 @@
 
 Welcome to the repository for METRO-T0, where you'll find model checkpoints, our pretraining pipeline, and the prompt-finetuning pipeline.
 
-Paper: Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers (TODO) (ACL 2023)
+Paper: [Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers](https://arxiv.org/abs/2305.12567) (ACL 2023)
 
 Authors: [Linyuan Gong](https://github.com/gonglinyuan), Chenyan Xiong, Xiaodong Liu, Payal Bajaj, Yiqing Xie, Alvin Cheung, Jianfeng Gao, Xia Song
 
@@ -134,5 +134,13 @@ Please refer to the `LICENSE` file in each subdirectory.
 If you find the code and models useful for your research, please cite the following paper:
 
 ```
-TODO
+@misc{gong2023modelgenerated,
+      title={Model-Generated Pretraining Signals Improves Zero-Shot Generalization of Text-to-Text Transformers}, 
+      author={Linyuan Gong and Chenyan Xiong and Xiaodong Liu and Payal Bajaj and Yiqing Xie and Alvin Cheung and Jianfeng Gao and Xia Song},
+      year={2023},
+      eprint={2305.12567},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2305.12567}
+}
 ```

@@ -6,6 +6,8 @@ Paper: [Model-Generated Pretraining Signals Improves Zero-Shot Generalization of
 
 Authors: [Linyuan Gong](https://github.com/gonglinyuan), Chenyan Xiong, Xiaodong Liu, Payal Bajaj, Yiqing Xie, Alvin Cheung, Jianfeng Gao, Xia Song
 
+Video Presentation: https://www.youtube.com/watch?v=XdejDJwuUls
+
 METRO-T0 is a T5-style text-to-text Transformer pretrained using model-generated pretraining signals, prompt-finetuned on a family of public NLP tasks proposed in [T0](https://arxiv.org/abs/2110.08207).
 METRO-T0 is highly parameter efficient. For example, METRO-T0-Large++ (775M parameters) outperforms GPT-3 (175B parameters) and T0-3B (3B parameters) on a wide range of NLP tasks.
 
@@ -119,7 +121,17 @@ Overall Acc: 69.80033835307977
 
 ## Pretraining
 
-TODO
+We use [fairseq](https://github.com/facebookresearch/fairseq) for pretraining and prompt-finetuning our models. Our extended version of the `fairseq` codebase has been shipped with this repository to support T5 pretraining and METRO-style pretraining.
+
+
+```bash
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
+fairseq-hydra-train -m --config-dir examples/t5/config/pretraining \
+--config-name t5_base_8gpus \
+common.user_dir=$(pwd)/efficent_large_lm_trainer \
+task.data=/path/to/wikibook_data \
+hydra.sweep.dir=/path/to/outputs
+```
 
 ## Prompt-Finetuning
 

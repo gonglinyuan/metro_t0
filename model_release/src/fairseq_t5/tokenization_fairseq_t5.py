@@ -47,10 +47,8 @@ class FairseqT5Tokenizer(PreTrainedTokenizer):
             )
         )
         self.fs_bpe = SentencepieceBPE(
-            DictConfig(
-                dict(
-                    sentencepiece_model=sp_path,
-                )
+            dict(
+                sentencepiece_model=sp_path,
             )
         )
         self.fs_dict = Dictionary.load(dict_path)

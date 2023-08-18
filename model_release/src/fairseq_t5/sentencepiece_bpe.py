@@ -28,6 +28,7 @@ class SentencepieceConfig:
 
 class SentencepieceBPE(object):
     def __init__(self, cfg):
+        cfg = SentencepieceConfig(**cfg)
         self.enable_sampling = cfg.sentencepiece_enable_sampling
         self.alpha = cfg.sentencepiece_alpha
         sentencepiece_model = cfg.sentencepiece_model

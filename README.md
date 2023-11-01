@@ -149,8 +149,7 @@ Data processing:
 cd training/data_processing
 
 # base (32k uncased vocabulary)
-bash download_and_process_t0_train_eval.sh \
-t0-train-eval-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
+bash download_and_process_t0_train_eval.sh t0-train-eval-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
 bash download_and_process_t0_train.sh t0-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
 bash download_and_process_t0p_train.sh t0p-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
 bash download_and_process_t0pp_train.sh t0pp-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64

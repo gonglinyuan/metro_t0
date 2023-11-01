@@ -14,7 +14,6 @@ except ImportError:
     with open(version_txt) as f:
         __version__ = f.read().strip()
 
-__all__ = ["pdb"]
 
 # backwards compatibility to support `from fairseq.X import Y`
 from fairseq.distributed import utils as distributed_utils
@@ -36,7 +35,6 @@ import fairseq.models  # noqa
 import fairseq.modules  # noqa
 import fairseq.optim  # noqa
 import fairseq.optim.lr_scheduler  # noqa
-import fairseq.pdb  # noqa
 import fairseq.scoring  # noqa
 import fairseq.tasks  # noqa
 import fairseq.token_generation_constraints  # noqa

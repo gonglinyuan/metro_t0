@@ -63,14 +63,6 @@ class NumpyExtension(Extension):
 
 
 extensions = [
-    Extension(
-        "fairseq.libbleu",
-        sources=[
-            "fairseq/clib/libbleu/libbleu.cpp",
-            "fairseq/clib/libbleu/module.cpp",
-        ],
-        extra_compile_args=extra_compile_args,
-    ),
     NumpyExtension(
         "fairseq.data.data_utils_fast",
         sources=["fairseq/data/data_utils_fast.pyx"],

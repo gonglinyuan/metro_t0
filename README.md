@@ -123,6 +123,14 @@ Overall Acc: 69.80033835307977
 
 We use [fairseq](https://github.com/facebookresearch/fairseq) for pretraining and prompt-finetuning our models. Our extended version of the `fairseq` codebase has been shipped with this repository to support T5 pretraining and METRO-style pretraining.
 
+Set up fairseq:
+
+```bash
+cd training
+python -m pip install -e .
+```
+
+Pretraining:
 
 ```bash
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
@@ -135,7 +143,18 @@ hydra.sweep.dir=/path/to/outputs
 
 ## Prompt-Finetuning
 
-TODO
+Data processing:
+
+```bash
+cd training/data_processing
+
+# base (32k uncased vocabulary)
+bash download_and_process_t0_train_eval.sh \
+t0-train-eval-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
+bash download_and_process_t0_train.sh t0-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
+bash download_and_process_t0p_train.sh t0p-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
+bash download_and_process_t0pp_train.sh t0pp-train-32k-uncased vocab_32k/dict.txt vocab_32k/sp.model --lower 64
+```
 
 ## Open-Source Licenses
 

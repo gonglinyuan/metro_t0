@@ -35,9 +35,5 @@ import fairseq.models  # noqa
 import fairseq.modules  # noqa
 import fairseq.optim  # noqa
 import fairseq.optim.lr_scheduler  # noqa
-import fairseq.scoring  # noqa
 import fairseq.tasks  # noqa
 import fairseq.token_generation_constraints  # noqa
-
-import fairseq.benchmark  # noqa
-import fairseq.model_parallel  # noqa
